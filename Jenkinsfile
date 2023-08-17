@@ -25,6 +25,7 @@ stages {
                     then
                     docker container stop -n jenkins
                     docker container rm -n jenkins
+                    fi
                     docker run -d -p 80:80 --name jenkins $DOCKER_ID/$DOCKER_IMAGE:$DOCKER_TAG
                     sleep 10
                     '''
